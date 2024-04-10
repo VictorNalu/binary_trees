@@ -12,7 +12,8 @@ typedef struct binary_tree_s {
 /* Function to create a binary tree node */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 
-/* Function to print binary tree (provided separately) */
+/* Function to print binary tree */
 void binary_tree_print(const binary_tree_t *);
+void binary_tree_print_recursive(const binary_tree_t *tree, int space);
 
 #endif /* BINARY_TREES_H */

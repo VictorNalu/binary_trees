@@ -12,12 +12,10 @@ size_t binary_tree_size(const binary_tree_t *tree)
 		return (0);
 
 	/* Recursively compute the size of the left subtree */
-	size_t left_size = binary_tree_size(tree->left);
+	left_size = tree->left ? binary_tree_size(tree->left) : 0;
 
 	/* Recursively compute the size of the right subtree */
-	size_t right_size = binary_tree_size(tree->right);
+	right_size = tree->right ? binary_tree_size(tree->right) : 0;
 
-	/* Return the size of the current node*/
-    /*plus the sizes of the left and right subtrees */
 	return (1 + left_size + right_size);
 }
